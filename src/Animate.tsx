@@ -20,5 +20,5 @@ export const Animate = ({
     let sub = propChanges.subscribe((newProps = {}) => setProps(newProps))
     return () => sub && sub.unsubscribe()
   }, [])
-  return <div>{React.createElement(component, props)}</div>
+  return React.createElement(component, props)
 }
